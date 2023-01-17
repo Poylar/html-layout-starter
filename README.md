@@ -8,7 +8,7 @@
 - pug
 - sass
 - postcss/autoprefixer
-- svg-spirtes
+- svg-sprites
 
 ## Запуск проекта
 
