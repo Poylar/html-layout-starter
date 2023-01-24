@@ -14,6 +14,8 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const isProd = process.env.NODE_ENV == 'production';
 const isDev = !isProd;
 
+const PATH = '/'
+
 console.log(process.env.NODE_ENV);
 
 module.exports = {
@@ -52,6 +54,7 @@ module.exports = {
         template: path.resolve(__dirname, pagesDir, file),
         filename: `${path.parse(file).name}.html`,
         minify: false,
+        path: isProd ? `/${PATH}` : '',
       });
     }),
     new ESLintPlugin(),
